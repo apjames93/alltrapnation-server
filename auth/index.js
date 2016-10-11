@@ -8,7 +8,6 @@ var jwt = require('jsonwebtoken');
 
 
 router.post('/login', function(req, res, next) {
-  console.log(req.query);
   queries.findUserByUserName(req.query.username)
   .then(function(user){
     var plainTextPassword = req.query.password;

@@ -20,7 +20,6 @@ var helpers = require('../auth/helpers.js');
   });
 
   router.get('/:id', function(req, res, next){
-    console.log(req.params.id);
     queries.getArtistinfo(req.params.id)
     .then(function(data){
       res.json({user : data});
